@@ -1,4 +1,4 @@
-# sample-JavaScript-applications
+# sample-JavaScript-Practice-applications
 These are JavaScrpts sample pages using each concept i created one type of page
 These are web pages I created to practice every concept in innotive method 
 
