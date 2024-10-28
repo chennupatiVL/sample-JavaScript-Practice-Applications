@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select  id="" onchange="f1()">
+        <option value="">------select-----</option>
+        <option value="Banana">Banana</option>
+        <option value="orange">orange</option>
+        <option value="Apple">Apple</option>
+        <option value="Guva">Guva</option>
+    </select>
+    <hr>
+    <h1></h1>
+    <hr>
+</body>
+<script>
+    function f1()
+    {
+        let y=document.querySelector('select').value
+        document.querySelector('h1').innerHTML=`i am ${y}`
+        if(y=='Banana')
+        {
+            let j=document.querySelector('h1')
+            j.style.color='yellow'
+        }
+       else if(y=='orange')
+        {
+            let j=document.querySelector('h1')
+            j.style.color='orange'
+        }
+        else if(y=='Guva')
+        {
+            let j=document.querySelector('h1')
+            j.style.color='green'
+        }
+        else
+        {
+            let j=document.querySelector('h1')
+            j.style.color='red'
+        }
+
+    }
+</script>
+</html>

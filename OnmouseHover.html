@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text">
+    <img src="https://tse3.mm.bing.net/th?id=OIP.aD9Tv_1rT3CGcyogPb1yBAHaFY&pid=Api&P=0&h=180" alt="" onmouseover="f1()" onmouseleave="f2()">
+    <hr>
+    <h1></h1>
+</body>
+<script>
+    let x=document.querySelector('img')
+    function f1(){
+    let g=document.querySelector('input').value
+    let y=document.querySelector('h1').innerHTML=g
+    }
+    function f2()
+    {
+        let y=document.querySelector('h1').innerHTML=null
+    }
+</script>
+</html>

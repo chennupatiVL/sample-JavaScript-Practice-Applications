@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <!-- <h1 id="a">hey</h1>
+    <h1 id="a">dude</h1>
+    <h1 id="b">wassapp</h1>
+
+    <div id="g">
+        <h1 id="r">devil</h1>
+        <h2 id="p">haunts you kill bill pandey</h2>
+    </div>
+    <h1 class="x">A</h1>
+    <h1 class="x">B</h1>
+    <h1 class="x">C</h1>
+    <H1 class="y">D</H1>
+    <h2>T</h2>
+    <h2>O</h2>
+    <h3>Y</h3>
+    <h3>O</h3> -->
+ 
+<!-- FIRST TYPE FOR CLICKING
+    <button onclick="f1()">Click me</button> -->
+    <!-- SECOND METHOD
+    <button>Click me</button> -->
+
+    <!-- THIRD mETHOD -->
+    <BUTTON>Click me</BUTTON>
+    
+</body>
+<!-- First type
+<script>
+    function f1()
+    {
+        window.alert('Pani leda pushpa')
+    }
+</script> -->
+
+<!-- <script>
+    let x=document.querySelector('button')
+    x.onclick=function f1()
+    {
+        document.write('Daakkunna kaani kanipettesaka ikkada vunna ani')
+    }
+</script> -->
+
+<script>
+    let x=document.querySelector('BUTTON')
+    x.addEventListener("click",()=>{
+        window.alert('Enni methods lo access chesthaav bro')
+    })
+</script>
+
+
+<!-- <script>
+    let z=document.getElementById('a')
+    let t=document.getElementById('b')
+
+    let z1=document.getElementById('r')
+    let t1=document.getElementById('p')
+
+    console.log(z1.innerHTML)
+    console.log(z1.innerText)
+    console.log(z1.textContent)
+
+    console.log(t1.innerHTML)
+    console.log(t1.innerText)
+    console.log(t1.textContent)
+
+    console.log(document.getElementById('a'))
+    console.log(document.getElementById('b'))
+    console.log(z.innerHTML)
+    console.log(z.innerText)
+    console.log(z.textContent)  
+</script> -->
+
+<!-- <script>
+    let q=document.getElementsByClassName('x')
+    console.log(q,Array.isArray(q))
+    let f=Array.from(q)
+    console.log(Array.isArray(f))
+    console.log(q[0],q[1])
+    for(let i=0;i<q.length;i++)
+    {
+        console.log(q[i].innerHTML)
+    }
+    let v=f.forEach(function f1(p){
+        console.log(p.innerHTML+'hey waste')
+    })
+    let v1=f.map(function f1(p,q){
+        console.log(p.innerHTML+'hey waste')
+        return q
+    })
+    console.log(v1)  
+</script> -->
+
+<!-- <script>
+let z=document.getElementsByTagName('h1','h2')
+console.log(z)
+</script> -->
+</html>

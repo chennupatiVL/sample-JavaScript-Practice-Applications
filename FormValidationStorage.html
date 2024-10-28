@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+
+        <input type="email" class="a"><br><br>
+        <input type="password" class="b">
+        <button>Submit</button>
+    
+        
+    </form>
+    <script>
+
+        let x=document.querySelector('.a').value
+        let y=document.querySelector('.b').value
+        document.querySelector('button').addEventListener('click',() =>
+        {
+            let v=sessionStorage.setItem('mail',x)
+            let i=sessionStorage.setItem('pass',y)
+
+            let v1=sessionStorage.getItem('mail')
+            let i1=sessionStorage.getItem('pass')
+            console.log(v1,i1)
+
+            if(x!="" && y!="")
+            {
+                window.open('login.html')
+            }
+            else if(x=='' || y=='')
+            {
+                window.alert('Mundu Form fill chey')
+            }
+
+
+        })
+
+
+    </script>
+</body>
+</html>

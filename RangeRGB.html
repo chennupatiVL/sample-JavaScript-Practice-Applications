@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        body{
+            background-image: url(../../Assignment_HTML/bg.jpg);
+            z-index: -9;
+        }
+    </style>
+</head>
+<body>
+    <h1></h1>
+    <input type="range" min="0" max="256" oninput="f1()" class="a">
+    <input type="range" min="0" max="256" oninput="f1()" class="b">
+    <input type="range" min="0" max="256" oninput="f1()" class="c">
+    <input type="range" min="0" max="1" oninput="f1()" class="d" step="0.01">
+</body>
+<script>
+    
+    function f1()
+    {
+        let y1=document.querySelector('.a').value
+        let y2=document.querySelector('.b').value
+        let y3=document.querySelector('.c').value
+        let y4=document.querySelector('.d').value
+        let x=`rgba(${y1},${y2},${y3},${y4})`
+        document.querySelector('body').style.backgroundColor=x
+        document.querySelector('h1').innerHTML=x
+
+    }
+    
+
+</script>
+
+</html>

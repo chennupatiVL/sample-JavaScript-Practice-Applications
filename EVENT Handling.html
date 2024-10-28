@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <!-- FIRST TYPE FOR CLICKING
+    <button onclick="f1()">Click me</button> -->
+    <!-- SECOND METHOD
+    <button>Click me</button> -->
+
+    <!-- THIRD mETHOD -->
+    <!-- <BUTTON>Click me</BUTTON> -->
+    <input type="text">
+    <img src="./../Assignment_HTML/fullmoon.png" alt="">
+    <h1></h1>
+      
+</body>
+
+<script>
+    var d=document.querySelector('img')
+d.onclick=function f1()
+{
+    var t=document.querySelector('input').value
+
+var v=document.querySelector('h1')
+  v.innerHTML=t
+}
+
+</script>
+
+
+<!-- First type
+<script>
+    function f1()
+    {
+        window.alert('Pani leda pushpa')
+    }
+</script> -->
+
+<!-- <script>
+    let x=document.querySelector('button')
+    x.onclick=function f1()
+    {
+        document.write('Daakkunna kaani kanipettesaka ikkada vunna ani')
+    }
+</script> -->
+
+<!-- <script>
+    let x=document.querySelector('BUTTON')
+    x.addEventListener("click",()=>{
+        window.alert('Enni methods lo access chesthaav bro')
+    })
+</script> -->
+</html>

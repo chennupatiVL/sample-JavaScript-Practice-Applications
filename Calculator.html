@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    *{
+        box-sizing: border-box;
+        margin: 0;
+        font-size: 20px;
+        color: white;
+    }
+   table{
+    background-color: grey;
+    margin-top: 30px;
+    box-shadow: 3px 4px 7px black;
+    border-radius: 9px;
+    
+   }
+    .btn,#ac,#ce,#eqa{
+        padding:20px;
+        
+        background-color: burlywood;
+        border-radius: 20px;
+        border:2px black solid;
+        box-shadow: 3px 4px 7px black;
+       
+    }
+    #ac,#ce,#eqa,#b{
+        background-color: rgb(183, 174, 174);
+    }
+    .btn:hover{
+        background-color: rgba(220, 138, 36, 0.673);
+        color: #000;
+    }
+    #ac:hover{
+        background-color: rgb(87, 87, 87);
+        color: #000;
+    }
+    #ce:hover{
+        background-color: rgb(87, 87, 87);
+        color: #000;
+    }
+    #b:hover{
+        background-color: rgb(87, 87, 87);
+        color: #000;
+    }
+    #eqa:hover{
+        background-color:rgb(87, 87, 87); 
+        color: #000;
+    }
+#Screen{
+margin-top: 10px;
+background-color:aliceblue;
+    padding-top: 10px;
+    padding: 38px;
+    color:#000;
+    box-shadow: 0px 0px 4px black;
+}
+#Screen:hover{
+    background-color:rgb(194, 218, 240);
+    border: 3px black solid;
+}
+#zero{
+    padding-left: 14px;
+}
+#dot{
+    padding-left: 24px;
+}
+</style>
+<body>
+    <center>
+        <table border="0px" cellpadding="10px" cellspacing="2px">
+            <tr>
+                <td colspan="4" border="2px"><input type="text" id="Screen"></td>
+
+            </tr>
+            <tr>
+                <td><button id="ac" onclick="f1()">AC</button></td>
+                <td><button id="ce" onclick="f2()">CE</button></td>
+                <td><button class="btn" id="b">/</button></td>
+                <td><button class="btn" id="b">%</button></td>
+            </tr>
+            <tr>
+                <td><button class="btn">1</button></td>
+                <td><button class="btn">2</button></td>
+                <td><button class="btn">3</button></td>
+                <td><button class="btn" id="b">+</button></td>
+            </tr>
+            <tr>
+                <td><button class="btn">4</button></td>
+                <td><button class="btn">5</button></td>
+                <td><button class="btn">6</button></td>
+                <td><button class="btn" id="b">-</button></td>
+            </tr>
+            <tr>
+                <td><button class="btn">7</button></td>
+                <td><button class="btn">8</button></td>
+                <td><button class="btn">9</button></td>
+                <td><button class="btn" id="b">*</button></td>
+            </tr>
+            <tr>
+                <td><button class="btn">0</button></td>
+                <td><button class="btn" id="zero">00</button></td>
+                <td><button class="btn" id="dot">.</button></td>
+                <td><button id="eqa" onclick="f3()">=</button></td>
+            </tr>
+        </table>
+    </center>
+    <script>
+    
+        let x=document.querySelector('#Screen')
+        let y=document.getElementsByClassName('btn')
+        for(let i=0;i<y.length;i++)
+        {
+            y[i].addEventListener("click",()=>
+            {
+                let c=x.value
+                if('+*/'.includes(c.slice(-1))&&'+*/'.includes(y[i].innerHTML))
+                {
+                    x.value=x.value.slice(0,-1)+y[i].innerHTML
+                }
+                else if((x.value).includes('='))
+                {
+                    x.value=y[i].innerHTML
+                }
+                else
+                {
+                    x.value+=y[i].innerHTML
+                }
+               
+            })
+        }
+        function f1()
+        {
+            x.value=null
+        }
+        function f2()
+        {   
+            
+            x.value=x.value.slice(0,-1)
+        }
+        function f3()
+        {
+            try
+            {
+                x.value+=" = "+eval(x.value)
+            }
+            catch(syntaxError)
+            {
+                if((x.value).includes('='))
+                {
+                    
+                    x.value=x.value
+                }
+                else
+                {
+                    x.value+=" = "+'Wrong Expression'   
+                }
+            }
+            
+        }
+            
+            
+
+
+    </script>
+</body>
+</html>

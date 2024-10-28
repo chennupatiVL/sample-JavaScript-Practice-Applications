@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Value1</label>
+    <input type="text" id="v1"><br><br>
+
+    <label>Value2</label>
+    <input type="text" id="v2"><br>
+    <hr>
+    <button id="ADD">ADD</button>
+    <button id="SUB">SUB</button>
+    <br>
+    <br>
+    <h1 id="s1"></h1><br>
+    <h1 id="s2"></h1><br>
+    
+
+
+</body>
+<script>
+let x=document.querySelector("#ADD")
+x.onclick=function f1()
+{
+    let a1=document.querySelector("#v1").value
+    let a2=document.querySelector("#v2").value
+    let s=Number(a1)+Number(a2)
+    
+    document.querySelector('#s1').innerHTML+="Addition Of Value 1 and value 2 is : " +s+"------"
+
+}
+let x1=document.querySelector("#SUB")
+x1.onclick=function f1()
+{
+    let a1=document.querySelector("#v1").value
+    let a2=document.querySelector("#v2").value
+    let s=Number(a1)-Number(a2)
+   
+    document.querySelector('#s2').innerHTML+="Subtraction Of Value 1 and value 2 is : " +s+"-------"
+
+
+}
+
+</script>
+</html>

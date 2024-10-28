@@ -1,0 +1,35 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" class="a" placeholder="name">
+        <input type="password" class="b" placeholder="password">
+        <h1></h1>
+        <button>Submit</button>
+    </form>
+    <script>
+        let x=document.querySelector('button')
+        x.addEventListener('click',()=>
+        {
+            let q=document.querySelector('.a').value
+            let p=document.querySelector('.b').value
+            sessionStorage.setItem('name',q)
+            sessionStorage.setItem('pass',p)
+
+            localStorage.setItem('name',q)
+            localStorage.setItem('pass',p)
+        })
+        let c=sessionStorage.getItem('pass')
+        console.log(c)
+        let c1=localStorage.getItem('pass')
+        console.log(c1)
+        
+    </script>
+</body>
+</html>

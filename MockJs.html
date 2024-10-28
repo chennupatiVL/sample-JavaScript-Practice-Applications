@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js</title>
+</head>
+<body>
+    <input type="text" id="a"><br><br>
+    <input type="password" id="b" oninput="f1()">
+    <h1></h1>
+    <button onclick="f2()">Submit</button>
+</body>
+<script>
+
+function f1(){
+let g1=document.querySelector('h1')
+        let x=document.querySelector('#b').value
+        let y=x.length
+        var g=document.querySelector('h1').innerHTML
+        if(y<=3)
+        {
+            var g=document.querySelector('h1').innerHTML="Weak Password"
+            g1.style.color='red'
+
+        }
+        if(y<=3)
+        {
+            var g=document.querySelector('h1').innerHTML="Weak Password"
+            g1.style.color='red'
+
+        }
+        else if(y>=4&&y<=6)
+        {
+            var g=document.querySelector('h1').innerHTML="good Password"
+            g1.style.color='Orange'
+
+        }
+        else if(y>=7&&y<=14)
+        {
+            var g=document.querySelector('h1').innerHTML="Strong Password"
+            g1.style.color='pink'
+
+        }
+        else 
+        {
+            var g=document.querySelector('h1').innerHTML="Exellent Password"
+            g1.style.color='green'
+        }
+    }
+    
+function f2()
+{
+    sessionStorage.setItem("name",document.getElementById("a").value)
+    sessionStorage.setItem("password",document.getElementById("b").value)
+    window.open('storage.html')
+}
+
+</script>
+</html>

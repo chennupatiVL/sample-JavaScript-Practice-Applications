@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type='password' oninput="f1()" placeholder="Enter Password">
+    <h1></h1>
+</body>
+<script>
+    function f1(){
+        
+        let g1=document.querySelector('h1')
+        let x=document.querySelector('input').value
+        let y=x.length
+        var g=document.querySelector('h1').innerHTML
+     
+        if(y<=3)
+        {
+            var g=document.querySelector('h1').innerHTML="Weak Password"
+            g1.style.color='red'
+
+        }
+        else if(y>=4&&y<=6)
+        {
+            var g=document.querySelector('h1').innerHTML="good Password"
+            g1.style.color='Orange'
+
+        }
+        else if(y>=7&&y<=14)
+        {
+            var g=document.querySelector('h1').innerHTML="Strong Password"
+            g1.style.color='pink'
+
+        }
+        else 
+        {
+            var g=document.querySelector('h1').innerHTML="Exellent Password"
+            g1.style.color='green'
+        }
+
+    }
+</script>
+</html>

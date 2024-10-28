@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+
+        <select onchange="f1()" id="a">
+            <option value="">------select-----</option>
+            <option value="AndhraPradesh">AndhraPradesh</option>
+            <option value="Telangana">Telangana</option>
+            <option value="Karnataka">Karnataka</option>
+            <option value="Pune">Pune</option>
+        </select>
+        <hr>
+    <h1></h1>
+    </form>
+</body>
+<script>
+   
+   function f1()
+   {
+    let y=document.querySelector('select').value
+    document.querySelector('h1').innerHTML=`i belongs to ${y}`
+   }
+
+</script>
+</html>

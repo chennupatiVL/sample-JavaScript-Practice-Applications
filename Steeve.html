@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin-top: 40%;
+        margin-bottom: 40%;
+        border: 2px black solid;
+    }
+    #a{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 50%;
+        height: 30%;
+        margin-left: 26%;
+        margin-top: 45%;
+        
+    }
+    input{
+        border: 2px black solid;
+    }
+    #r{
+      
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%; 
+    }
+</style>
+<body>
+    
+    <div id="a">
+       <label>Enter value1: </label> <input type="text" id="v1"><br><br><br>
+       <label>Enter value2: </label><input type="text" id="v2">
+    </div><br><br>
+   <div id="r">
+     <button>Submit</button>
+   </div><br>
+   <hr><br>
+   <h1></h1><br>
+   <hr>
+</body>
+<script>
+ 
+    let x=document.querySelector('button')
+    x.onclick=function f1()
+    {   
+        let a=document.querySelector("#v1").value
+        let b=document.querySelector("#v2").value
+        let y=a+b
+        document.querySelector('h1').innerHTML=y
+    }
+</script>
+</html>
